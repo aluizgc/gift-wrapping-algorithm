@@ -6,11 +6,11 @@ let verticeAtual
 let index
 let proxIndex = -1
 let proxVertice
-
+let numPontos = 200
 function setup() {
   createCanvas(500, 500)
   let buffer = 20
-  for (let i = 0; i<100;i++){
+  for (let i = 0; i<numPontos;i++){
   pontos.push(createVector(random(buffer,width-buffer), random(buffer,height-buffer)))
   }
   
@@ -26,7 +26,7 @@ function draw() {
   background(0)
   
   stroke(255)
-  strokeWeight(8)
+  strokeWeight(5)
   for (let p of pontos){
     point(p.x,p.y)
   }
@@ -40,11 +40,11 @@ function draw() {
   endShape(CLOSE)
   
   stroke(0,255,0)
-  strokeWeight(20)
+  strokeWeight(10)
   point(extremoEsq.x,extremoEsq.y)
   
   stroke(200,0,255)
-  strokeWeight(20)
+  strokeWeight(10)
   point(verticeAtual.x,verticeAtual.y)
   
   stroke(0,255,0)
